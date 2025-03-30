@@ -1,0 +1,11 @@
+::ng-deep app-home {
+    display: flex;
+    justify-content: center;
+}
+
+.container-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
