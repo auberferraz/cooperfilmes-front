@@ -20,7 +20,6 @@ export class SendMovieScriptComponent {
     private formBuilder: FormBuilder,
     private roteiroService: RoteiroService,
     private toastService: ToastService,
-    private router: Router
   ) {
     this.roteiroForm = this.formBuilder.group({
       name: ['', Validators.required],
