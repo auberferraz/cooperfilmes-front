@@ -1,0 +1,9 @@
+::ng-deep app-toast-bootstrap {
+    top: 0 !important;
+    right: 0 !important;
+    position: fixed !important;
+}
+
+.toast {
+    margin: 1rem 1rem -0.5rem 0 !important;
+}

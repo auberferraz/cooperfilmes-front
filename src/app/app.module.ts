@@ -7,13 +7,17 @@ import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 import { LoginComponent } from './pages/login/login.component';
 import { SendMovieScriptComponent } from './pages/send-movie-script/send-movie-script.component';
 import { HomeComponent } from './pages/home/home.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ToastBootstrapComponent } from './components/toast-bootstrap/toast-bootstrap.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SendMovieScriptComponent,
-    HomeComponent
+    HomeComponent,
+    ToastBootstrapComponent
   ],
   imports: [
     BrowserModule,
@@ -21,6 +25,13 @@ import { HomeComponent } from './pages/home/home.component';
     NgbModule,
     NgxMaskDirective,
     NgxMaskPipe,
+    FormsModule,
+    ReactiveFormsModule,
+    NgbModule,
+    HttpClientModule
+  ],
+  exports: [
+    ToastBootstrapComponent
   ],
   providers: [provideNgxMask()],
   bootstrap: [AppComponent]
