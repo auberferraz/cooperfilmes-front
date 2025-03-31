@@ -11,14 +11,13 @@ export class RoteiroService {
     private httpClient: HttpClient
   ) { }
 
-  login(name: string, email: string, phoneNumber: string, movieScript: string) {
+  sendMovieScript(name: string, email: string, phoneNumber: string, movieScript: string) {
     return this.httpClient.post(`${this.apiUrl}/send-movie-script`,
-      {
-        name,
-        email,
-        phoneNumber,
-        movieScript
-      });
+      { name, email, phoneNumber, movieScript });
+  }
+  
+  consultMovieScript(email: string) {
+    return this.httpClient.post(`${this.apiUrl}/consult-movie-script`, { email });
   }
 
 }

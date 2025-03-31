@@ -10,13 +10,20 @@ export class PermissionService {
 
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
     const authToken = sessionStorage.getItem('auth-token');
+    const userRole = sessionStorage.getItem('user-role');
 
-    if (authToken) {
+    if (authToken && userRole) {
       return true;
     } else {
+      this.logout();
       this.router.navigate(['/login']);
       return false;
     }
+  }
+
+  logout() {
+    sessionStorage.removeItem('auth-token');
+    sessionStorage.removeItem('user-role');
   }
 
 }

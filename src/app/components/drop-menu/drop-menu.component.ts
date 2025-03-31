@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./drop-menu.component.scss']
 })
 export class DropMenuComponent {
-
+  authToken = sessionStorage.getItem('auth-token');
 }

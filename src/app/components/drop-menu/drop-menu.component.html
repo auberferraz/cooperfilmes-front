@@ -13,6 +13,12 @@
                 <a class="nav-link" routerLink="/enviar-roteiro">🔵Enviar Roteiro</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" routerLink="/consulta-de-roteiro">🔵Consultar Roteiro</a>
+            </li>
+            <li class="nav-item" *ngIf="authToken">
+                <a class="nav-link" routerLink="/lista-de-roteiro">🔵Listar Roteiros</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" routerLink="/login">🔵Login</a>
             </li>
         </ul>

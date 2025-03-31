@@ -30,7 +30,12 @@ export class SendMovieScriptComponent {
   }
 
   submit() {
-    this.roteiroService.login(
+    if (!this.roteiroForm.valid) {
+      this.toastService.show('Formulário inválido! Preencha todos os campos.', { classname: 'text-bg-danger', delay: 3000 });
+      return;
+    }
+
+    this.roteiroService.sendMovieScript(
       this.roteiroForm.value.name,
       this.roteiroForm.value.email,
       this.roteiroForm.value.phoneNumber,

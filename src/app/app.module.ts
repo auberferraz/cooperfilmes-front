@@ -11,6 +11,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastBootstrapComponent } from './components/toast-bootstrap/toast-bootstrap.component';
 import { DropMenuComponent } from './components/drop-menu/drop-menu.component';
+import { ListMovieScriptComponent } from './pages/list-movie-script/list-movie-script.component';
+import { ConsultMovieScriptComponent } from './pages/consult-movie-script/consult-movie-script.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { DropMenuComponent } from './components/drop-menu/drop-menu.component';
     SendMovieScriptComponent,
     HomeComponent,
     ToastBootstrapComponent,
-    DropMenuComponent
+    DropMenuComponent,
+    ListMovieScriptComponent,
+    ConsultMovieScriptComponent,
   ],
   imports: [
     BrowserModule,
