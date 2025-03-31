@@ -47,9 +47,4 @@ export class SendMovieScriptComponent {
     });
   }
 
-  showNotification() {
-    this.showToast = !this.showToast;
-  }
-
-
 }

@@ -10,6 +10,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastBootstrapComponent } from './components/toast-bootstrap/toast-bootstrap.component';
+import { DropMenuComponent } from './components/drop-menu/drop-menu.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ToastBootstrapComponent } from './components/toast-bootstrap/toast-boot
     LoginComponent,
     SendMovieScriptComponent,
     HomeComponent,
-    ToastBootstrapComponent
+    ToastBootstrapComponent,
+    DropMenuComponent
   ],
   imports: [
     BrowserModule,
