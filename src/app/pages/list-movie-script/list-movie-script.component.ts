@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ToastService } from 'src/app/services/toast.service';
+import { UserRoteiroService } from 'src/app/services/user-roteiro.service';
 
 @Component({
   selector: 'app-list-movie-script',
@@ -7,12 +9,31 @@ import { Router } from '@angular/router';
   styleUrls: ['./list-movie-script.component.scss']
 })
 export class ListMovieScriptComponent {
-  loginData: any;
+  roteiroData: any;
 
   constructor(
-      private router: Router,
-    ) {
-      this.loginData = this.router.getCurrentNavigation()?.extras
-    }
+    private userRoteiroService: UserRoteiroService,
+    private router: Router,
+    private route: ActivatedRoute,
+    private toastService: ToastService
+  ) {
+    this.getRoteiro()
+  }
+
+  getRoteiro() {
+    this.userRoteiroService.getAllMovieScript()
+      .subscribe({
+        next: (res) => {
+          this.roteiroData = res;
+        },
+        error: () => {
+          this.toastService.show('Erro ao consultar o roteiro.', { classname: 'text-bg-danger', delay: 3000 });
+        }
+      });
+  }
+
+  navigateMovieScript(id: number) {
+    this.router.navigate([`/roteiro/${id}`])
+  }
 
 }

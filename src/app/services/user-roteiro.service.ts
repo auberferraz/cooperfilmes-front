@@ -15,4 +15,8 @@ export class UserRoteiroService {
     return this.httpClient.get(`${this.apiUrl}?id=${id}`);
   }
 
+  getAllMovieScript() {
+    return this.httpClient.get(`${this.apiUrl}/consult-all-movie-script`);
+  }
+
 }

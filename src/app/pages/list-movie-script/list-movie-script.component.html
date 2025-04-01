@@ -15,13 +15,13 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>XXX</td>
-                    <td>XXX</td>
-                    <td>XXX</td>
-                    <td>XXX</td>
+                <tr *ngFor="let item of roteiroData">
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.email }}</td>
+                    <td>{{ item.phoneNumber }}</td>
+                    <td>{{ item.status }}</td>
                     <td>
-                        <button routerLink="/roteiro/1" type="button" class="width-100 btn btn-sm btn-secondary" title="Visualizar Roteiro">
+                        <button (click)="navigateMovieScript(item.id)" type="button" class="width-100 btn btn-sm btn-secondary" title="Visualizar Roteiro">
                             <i class="bi bi-eye-fill"></i>
                         </button>
                     </td>

@@ -27,8 +27,6 @@ export class MovieScriptViewComponent {
 
   getRoteiro() {
     this.userRoteiroService.getMovieScriptById(this.idRoteiro)
-
-    this.userRoteiroService.getMovieScriptById(this.idRoteiro)
     .subscribe({
       next: (res) => {
         this.roteiroData = res;
