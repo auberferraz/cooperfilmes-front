@@ -21,7 +21,7 @@
                     <td>{{ item.phoneNumber }}</td>
                     <td>{{ item.status | status }}</td>
                     <td>
-                        <button (click)="navigateMovieScript(item.id)" type="button" class="width-100 btn btn-sm btn-secondary" title="Visualizar Roteiro">
+                        <button *ngIf="item.status != 'APROVADO'" (click)="navigateMovieScript(item.id)" type="button" class="width-100 btn btn-sm btn-secondary" title="Visualizar Roteiro">
                             <i class="bi bi-eye-fill"></i>
                         </button>
                     </td>
