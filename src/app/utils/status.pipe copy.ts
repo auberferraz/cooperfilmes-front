@@ -1,37 +1,39 @@
 import { Pipe } from "@angular/core";
 
 @Pipe({
-    name: "phone"
+    name: "status"
 })
-export class PhonePipe {
-    transform(status: string) {
+export class StatusPipe {
+    transform(status: any) {
+        let res;
         switch (status) {
             case "AGUARDANDO_ANALISE":
-                return "AGUARDANDO ANALISE"    
+                res = "Aguardando Análise"    
             break;
             case "EM_ANALISE":
-                return "EM ANALISE"    
+                res = "Em Análise"    
             break;
             case "AGUARDANDO_REVISAO":
-                return "AGUARDANDO REVISAO"    
+                res = "Aguardando Revisão"    
             break;
             case "EM_REVISAO":
-                return "EM REVISAO"    
+                res = "Em Revisão"    
             break;
             case "AGUARDANDO_APROVACAO":
-                return "AGUARDANDO APROVACAO"    
+                res = "Aguardando Aprovação"    
             break;
             case "EM_APROVACAO":
-                return "EMAPROVACAO"    
+                res = "Em Aprovação"    
             break;
             case "APROVADO":
-                return "APROVADO"    
+                res = "Aprovado"    
             break;
             case "RECUSADO":
-                return "RECUSADO"    
+                res = "Recusado"    
             break;
             default:
                 break;
         }
+        return res;
     }
 }

@@ -16,6 +16,7 @@ import { MovieScriptViewComponent } from './pages/movie-script-view/movie-script
 import { SendMovieScriptComponent } from './pages/send-movie-script/send-movie-script.component';
 import { AuthInterceptor } from 'src/auth.interceptor';
 import { PhonePipe } from './utils/phone.pipe';
+import { StatusPipe } from './utils/status.pipe copy';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { PhonePipe } from './utils/phone.pipe';
     ListMovieScriptComponent,
     ConsultMovieScriptComponent,
     MovieScriptViewComponent,
-    PhonePipe
+    PhonePipe,
+    StatusPipe
   ],
   imports: [
     BrowserModule,

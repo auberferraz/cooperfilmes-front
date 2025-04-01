@@ -17,7 +17,7 @@
         </div>
         <div>
             <span class="bold">Situação: </span>
-            <span>{{ roteiroData?.status }}</span>
+            <span>{{ roteiroData?.status | status }}</span>
         </div>
         <div>
             <span class="bold">Roteiro: </span>
@@ -29,7 +29,7 @@
                 RECUSAR
             </button>
             <button type="button" class="btn btn-success btn-radio">
-                APROVAR
+                SEGUIR FLUXO
             </button>
         </div>
     </div>
