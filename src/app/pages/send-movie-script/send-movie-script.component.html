@@ -1,0 +1,32 @@
+<app-drop-menu></app-drop-menu>
+<div class="card">
+    <h2 class="title">COOPERFILMES</h2>
+    <div class="card-body">
+        <h4 class="card-title">Envie o seu roteiro</h4>
+
+        <form [formGroup]="roteiroForm" (submit)="submit()">
+            <div class="form-group">
+                <label>Nome</label>
+                <input type="text" formControlName="name" class="form-control" placeholder="Digite seu nome" required>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" formControlName="email" class="form-control" placeholder="Digite seu email"
+                    required>
+            </div>
+            <div class="form-group">
+                <label>Telefone</label>
+                <input type="text" formControlName="phoneNumber" class="form-control" placeholder="Digite seu telefone"
+                    mask="(00) 00000-0000" required>
+            </div>
+            <div class="form-group">
+                <label>Roteiro</label>
+                <textarea formControlName="movieScript" class="form-control" rows="6"
+                    placeholder="Digite aqui seu roteiro" required></textarea>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-radio">ENVIAR</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+html, body {
+    height: 100% !important;
+}
+
+::ng-deep app-root {
+    height: 100%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.card {
+    width: 90% !important;
+    border: unset !important;
+    margin-top: 4rem !important;
+}
+
+.btn-radio {
+    border-radius: 30px;
+}
+
+.title {
+    color: #4071b1 !important;
+    text-align: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.width-100 {
+    width: 100% !important;
+}

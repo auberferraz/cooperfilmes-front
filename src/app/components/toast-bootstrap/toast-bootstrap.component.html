@@ -1,0 +1,9 @@
+<ngb-toast [ngClass]="toast.classname" class="toast align-items-center border-0" *ngFor="let toast of toastService.toasts"
+    [autohide]="true" [delay]="toast.delay || 5000" (hidden)="toastService.remove(toast)">
+    <ng-template [ngIf]="isTemplate(toast.textOrTpl)">
+        <ng-template [ngTemplateOutlet]="toast.textOrTpl"></ng-template>
+    </ng-template>
+    <ng-template [ngIf]="!isTemplate(toast.textOrTpl)">
+        {{ toast.textOrTpl }}
+    </ng-template>
+</ngb-toast>

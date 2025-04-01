@@ -1,0 +1,32 @@
+<app-drop-menu></app-drop-menu>
+<div class="card">
+    <h2 class="title">COOPERFILMES</h2>
+    <div class="card-body">
+        <h4 class="card-title">Fluxo de roteiro</h4>
+        <div>
+            <span class="bold">Cliente: </span>
+            <span>{{ roteiroData?.name }}</span>
+        </div>
+        <div>
+            <span class="bold">Email: </span>
+            <span>{{ roteiroData?.email }}</span>
+        </div>
+        <div>
+            <span class="bold">Telefone: </span>
+            <span>{{ roteiroData?.phoneNumber | phone }}</span>
+        </div>
+        <div>
+            <span class="bold">Roteiro: </span>
+            <br>
+            <span>{{ roteiroData?.movieScript }}</span>
+        </div>
+        <div class="container-btn">
+            <button type="button" class="btn btn-danger btn-radio">
+                RECUSAR
+            </button>
+            <button type="button" class="btn btn-success btn-radio">
+                APROVAR
+            </button>
+        </div>
+    </div>
+</div>
