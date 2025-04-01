@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { State } from 'src/app/enums/status.enum';
 import { ToastService } from 'src/app/services/toast.service';
 import { UserRoteiroService } from 'src/app/services/user-roteiro.service';
+import { Utils } from 'src/app/utils/utils';
 
 @Component({
   selector: 'app-movie-script-view',
@@ -11,6 +13,7 @@ import { UserRoteiroService } from 'src/app/services/user-roteiro.service';
 export class MovieScriptViewComponent {
   roteiroData: any;
   idRoteiro: any;
+  statusEnum: any = State;
 
   constructor(
     private userRoteiroService: UserRoteiroService,
@@ -29,6 +32,7 @@ export class MovieScriptViewComponent {
     .subscribe({
       next: (res) => {
         this.roteiroData = res;
+        
       },
       error: () => {
         this.toastService.show('Erro ao consultar o roteiro.', { classname: 'text-bg-danger', delay: 3000 });

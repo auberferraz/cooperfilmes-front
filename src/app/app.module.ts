@@ -15,6 +15,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { MovieScriptViewComponent } from './pages/movie-script-view/movie-script-view.component';
 import { SendMovieScriptComponent } from './pages/send-movie-script/send-movie-script.component';
 import { AuthInterceptor } from 'src/auth.interceptor';
+import { PhonePipe } from './utils/phone.pipe';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { AuthInterceptor } from 'src/auth.interceptor';
     ListMovieScriptComponent,
     ConsultMovieScriptComponent,
     MovieScriptViewComponent,
+    PhonePipe
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,7 @@ import { AuthInterceptor } from 'src/auth.interceptor';
     FormsModule,
     ReactiveFormsModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   exports: [
     ToastBootstrapComponent
