@@ -12,7 +12,7 @@
             </div>
         </form>
 
-        <table class="mt-4 table table-sm table-light">
+        <table class="mt-4 table table-sm table-light" *ngIf="consultData">
             <thead>
               <tr>
                 <th class="col-9" scope="col">Roteiro</th>
@@ -20,13 +20,9 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>XXX</td>
-                <td>XXX</td>
-              </tr>
-              <tr>
-                <td>XXX</td>
-                <td>XXX</td>
+              <tr *ngFor="let item of consultData">
+                <td>{{ item.movieScript }}</td>
+                <td>{{ item.status }}</td>
               </tr>
             </tbody>
           </table>

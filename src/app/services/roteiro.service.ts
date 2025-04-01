@@ -17,7 +17,7 @@ export class RoteiroService {
   }
   
   consultMovieScript(email: string) {
-    return this.httpClient.post(`${this.apiUrl}/consult-movie-script`, { email });
+    return this.httpClient.get(`${this.apiUrl}/consult-movie-script?email=${email}`);
   }
 
 }
