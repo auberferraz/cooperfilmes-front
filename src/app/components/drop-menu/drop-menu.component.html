@@ -15,12 +15,19 @@
             <li class="nav-item">
                 <a class="nav-link" routerLink="/consulta-de-roteiro">🔵Consultar Roteiro</a>
             </li>
-            <li class="nav-item" *ngIf="authToken">
-                <a class="nav-link" routerLink="/lista-de-roteiro">🔵Listar Roteiros</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/login">🔵Login</a>
-            </li>
+            <ng-container *ngIf="!authToken">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/login">🔵Login</a>
+                </li>
+            </ng-container>
+            <ng-container *ngIf="authToken">
+                <li class="nav-item" >
+                    <a class="nav-link" routerLink="/lista-de-roteiros">🔵Roteiros Para Aprovação</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/lista-de-roteiros" (click)="logout()">🔵Logout</a>
+                </li>
+            </ng-container>
         </ul>
     </div>
 </nav>
