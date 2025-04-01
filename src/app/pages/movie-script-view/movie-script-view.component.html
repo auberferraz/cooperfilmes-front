@@ -2,8 +2,31 @@
 <div class="card">
     <h2 class="title">COOPERFILMES</h2>
     <div class="card-body">
-        <h4 class="card-title">XXX</h4>
-
-        
+        <h4 class="card-title">Fluxo de roteiro</h4>
+        <div>
+            <span class="bold">Cliente: </span>
+            <span>{{ roteiroData?.name }}</span>
+        </div>
+        <div>
+            <span class="bold">Email: </span>
+            <span>Auber</span>
+        </div>
+        <div>
+            <span class="bold">Telefone: </span>
+            <span>Auber</span>
+        </div>
+        <div>
+            <span class="bold">Roteiro: </span>
+            <br>
+            <span>Auber</span>
+        </div>
+        <div class="container-btn">
+            <button type="button" class="btn btn-danger btn-radio" routerLink="/enviar-roteiro">
+                RECUSAR
+            </button>
+            <button type="button" class="btn btn-success btn-radio" routerLink="login">
+                APROVAR
+            </button>
+        </div>
     </div>
 </div>

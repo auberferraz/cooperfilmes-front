@@ -1,19 +1,20 @@
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
-import { LoginComponent } from './pages/login/login.component';
-import { SendMovieScriptComponent } from './pages/send-movie-script/send-movie-script.component';
-import { HomeComponent } from './pages/home/home.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { ToastBootstrapComponent } from './components/toast-bootstrap/toast-bootstrap.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 import { DropMenuComponent } from './components/drop-menu/drop-menu.component';
-import { ListMovieScriptComponent } from './pages/list-movie-script/list-movie-script.component';
+import { ToastBootstrapComponent } from './components/toast-bootstrap/toast-bootstrap.component';
 import { ConsultMovieScriptComponent } from './pages/consult-movie-script/consult-movie-script.component';
+import { HomeComponent } from './pages/home/home.component';
+import { ListMovieScriptComponent } from './pages/list-movie-script/list-movie-script.component';
+import { LoginComponent } from './pages/login/login.component';
 import { MovieScriptViewComponent } from './pages/movie-script-view/movie-script-view.component';
+import { SendMovieScriptComponent } from './pages/send-movie-script/send-movie-script.component';
+import { AuthInterceptor } from 'src/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,6 @@ import { MovieScriptViewComponent } from './pages/movie-script-view/movie-script
     ListMovieScriptComponent,
     ConsultMovieScriptComponent,
     MovieScriptViewComponent,
-    
   ],
   imports: [
     BrowserModule,
@@ -42,7 +42,15 @@ import { MovieScriptViewComponent } from './pages/movie-script-view/movie-script
   exports: [
     ToastBootstrapComponent
   ],
-  providers: [provideNgxMask()],
+  providers: [
+    provideNgxMask(),
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
