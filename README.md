@@ -2,8 +2,10 @@
 ### Tecnologias utilizadas:
 * #### Angular
 * #### Bootstrap
-* #### Icon
+* #### Bootstrap Icon
 * #### NGX Mask
+* ### Componentização
+* ### Pipes Customizadas
 
 <br /><br />
 
