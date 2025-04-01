@@ -23,6 +23,3 @@
 * #### Todas as senha: 123
 
 <br /><br />
-
-### Existe um arquivo DOCKER localizado no backend, pasta docker. O mesmo poderá facilitar para subir rapidamente um banco de dados.
-### Para executar o docker no Windows, é necessário ter o Docker Desktop instalado. Com ele rodando, basta abrir o terminal na pasta docker e executar o comando "docker compose up."
