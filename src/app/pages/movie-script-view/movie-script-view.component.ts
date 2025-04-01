@@ -27,15 +27,29 @@ export class MovieScriptViewComponent {
 
   getRoteiro() {
     this.userRoteiroService.getMovieScriptById(this.idRoteiro)
-    .subscribe({
-      next: (res) => {
-        this.roteiroData = res;
-        
-      },
-      error: () => {
-        this.toastService.show('Erro ao consultar o roteiro.', { classname: 'text-bg-danger', delay: 3000 });
-      }
-    });
+      .subscribe({
+        next: (res) => {
+          this.roteiroData = res;
+
+        },
+        error: () => {
+          this.toastService.show('Erro ao consultar o roteiro.', { classname: 'text-bg-danger', delay: 3000 });
+        }
+      });
+  }
+
+  setNextStatus() {
+    this.userRoteiroService.setNextStatus(this.idRoteiro)
+      .subscribe({
+        next: () => {
+          this.toastService.show('Roteiro passado para o proximo estágio.', { classname: 'text-bg-success', delay: 3000 });
+          this.router.navigate(['lista-de-roteiros']);
+          return;
+        },
+        error: () => {
+          this.toastService.show('Erro ao processar roteiro.', { classname: 'text-bg-danger', delay: 3000 });
+        }
+      });
   }
 
 }

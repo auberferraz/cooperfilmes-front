@@ -19,4 +19,8 @@ export class UserRoteiroService {
     return this.httpClient.get(`${this.apiUrl}/consult-all-movie-script`);
   }
 
+  setNextStatus(id: number) {
+    return this.httpClient.post(`${this.apiUrl}/set-next-status`, { id });
+  }
+
 }
