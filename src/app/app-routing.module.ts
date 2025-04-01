@@ -4,6 +4,7 @@ import { ConsultMovieScriptComponent } from './pages/consult-movie-script/consul
 import { HomeComponent } from './pages/home/home.component';
 import { ListMovieScriptComponent } from './pages/list-movie-script/list-movie-script.component';
 import { LoginComponent } from './pages/login/login.component';
+import { MovieScriptViewComponent } from './pages/movie-script-view/movie-script-view.component';
 import { SendMovieScriptComponent } from './pages/send-movie-script/send-movie-script.component';
 import { AuthGuard } from './services/permission.service';
 
@@ -27,6 +28,11 @@ const routes: Routes = [
   {
     path: 'lista-de-roteiros',
     component: ListMovieScriptComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'roteiro/:id',
+    component: MovieScriptViewComponent,
     canActivate: [AuthGuard],
   },
 ];

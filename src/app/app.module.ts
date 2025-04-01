@@ -13,6 +13,7 @@ import { ToastBootstrapComponent } from './components/toast-bootstrap/toast-boot
 import { DropMenuComponent } from './components/drop-menu/drop-menu.component';
 import { ListMovieScriptComponent } from './pages/list-movie-script/list-movie-script.component';
 import { ConsultMovieScriptComponent } from './pages/consult-movie-script/consult-movie-script.component';
+import { MovieScriptViewComponent } from './pages/movie-script-view/movie-script-view.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,8 @@ import { ConsultMovieScriptComponent } from './pages/consult-movie-script/consul
     DropMenuComponent,
     ListMovieScriptComponent,
     ConsultMovieScriptComponent,
+    MovieScriptViewComponent,
+    
   ],
   imports: [
     BrowserModule,

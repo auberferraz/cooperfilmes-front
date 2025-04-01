@@ -15,10 +15,10 @@ export class DropMenuComponent {
     private permissionService: PermissionService,
     private router: Router,
   ) {
-    this.refresh();
+    this.getPemission();
   }
 
-  refresh() {
+  getPemission() {
     this.authToken = sessionStorage.getItem('auth-token');
   }
 

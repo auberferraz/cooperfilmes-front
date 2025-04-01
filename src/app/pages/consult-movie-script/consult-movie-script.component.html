@@ -1,31 +1,33 @@
+<app-drop-menu></app-drop-menu>
 <div class="card">
-    <h2 class="title">COOPERFILMES</h2>
-    <div class="card-body">
-        <h4 class="card-title">Consultar roteiro</h4>
+  <h2 class="title">COOPERFILMES</h2>
+  <div class="card-body">
+    <h4 class="card-title">Consultar roteiro</h4>
 
-        <form class="row" [formGroup]="consultForm" (submit)="submit()">
-            <div class="form-group col-sm-8 col-12">
-                <input type="email" formControlName="email" class="form-control" placeholder="Digite o email para consultar roteiro" required>
-            </div>
-            <div class="col-sm-4 col-12">
-                <button type="submit" class="btn btn-primary btn-radio">CONSULTAR</button>
-            </div>
-        </form>
+    <form class="row" [formGroup]="consultForm" (submit)="submit()">
+      <div class="form-group col-sm-8 col-12">
+        <input type="email" formControlName="email" class="form-control"
+          placeholder="Digite o email para consultar roteiro" required>
+      </div>
+      <div class="col-sm-4 col-12">
+        <button type="submit" class="btn btn-primary btn-radio">CONSULTAR</button>
+      </div>
+    </form>
 
-        <table class="mt-4 table table-sm table-light" *ngIf="consultData">
-            <thead>
-              <tr>
-                <th class="col-9" scope="col">Roteiro</th>
-                <th class="col-3" scope="col">Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let item of consultData">
-                <td>{{ item.movieScript }}</td>
-                <td>{{ item.status }}</td>
-              </tr>
-            </tbody>
-          </table>
-        
-    </div>
+    <table class="mt-4 table table-sm table-light" *ngIf="consultData">
+      <thead>
+        <tr>
+          <th class="col-9" scope="col">Roteiro</th>
+          <th class="col-3" scope="col">Situação</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of consultData">
+          <td>{{ item.movieScript }}</td>
+          <td>{{ item.status }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
 </div>

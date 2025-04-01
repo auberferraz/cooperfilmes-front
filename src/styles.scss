@@ -2,6 +2,7 @@
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+@import "~bootstrap-icons/font/bootstrap-icons.css";
 
 html, body {
     height: 100% !important;
@@ -9,6 +10,12 @@ html, body {
 
 ::ng-deep app-root {
     height: 100%;
+}
+
+.card {
+    width: 90% !important;
+    border: unset !important;
+    margin-top: 4rem !important;
 }
 
 .btn-radio {

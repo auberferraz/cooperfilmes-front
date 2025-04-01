@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class RoteiroService {
-  apiUrl: string = "http://localhost:8080/roteiro"
+  apiUrl: string = "http://localhost:8080/client/roteiro"
 
   constructor(
     private httpClient: HttpClient
