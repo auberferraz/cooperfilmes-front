@@ -12,7 +12,7 @@ export class UserRoteiroService {
   ) { }
   
   getMovieScriptById(id: string) {
-    return this.httpClient.get(`${this.apiUrl}/consult-movie-script?id=${id}`);
+    return this.httpClient.get(`${this.apiUrl}?id=${id}`);
   }
 
 }
